@@ -20,6 +20,9 @@ if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'));
 }
 
+// Body Parser
+app.use(express.json)
+
 //Mount routers
 app.use('/api/v1/bootcamps', bootcampRoute);
 
